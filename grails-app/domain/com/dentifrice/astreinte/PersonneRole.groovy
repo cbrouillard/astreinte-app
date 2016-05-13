@@ -28,15 +28,15 @@ class PersonneRole implements Serializable {
 		builder.toHashCode()
 	}
 
-	static PersonneRole get(long personneId, long roleId) {
+	static PersonneRole get(String personneId, long roleId) {
 		criteriaFor(personneId, roleId).get()
 	}
 
-	static boolean exists(long personneId, long roleId) {
+	static boolean exists(String personneId, long roleId) {
 		criteriaFor(personneId, roleId).count()
 	}
 
-	private static DetachedCriteria criteriaFor(long personneId, long roleId) {
+	private static DetachedCriteria criteriaFor(String personneId, long roleId) {
 		PersonneRole.where {
 			personne == Personne.load(personneId) &&
 			role == Role.load(roleId)

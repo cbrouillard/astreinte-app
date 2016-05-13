@@ -11,12 +11,14 @@ class Personne implements Serializable {
 
 	transient springSecurityService
 
+    String id
+
 	String username
 	String password
 	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+	boolean accountExpired = false
+	boolean accountLocked = false
+	boolean passwordExpired = false
 
 	Set<Role> getAuthorities() {
 		PersonneRole.findAllByPersonne(this)*.role
@@ -45,5 +47,6 @@ class Personne implements Serializable {
 
 	static mapping = {
 		password column: '`password`'
+        id generator:'uuid'
 	}
 }
