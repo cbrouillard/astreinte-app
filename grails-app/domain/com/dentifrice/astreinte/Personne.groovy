@@ -15,6 +15,8 @@ class Personne implements Serializable {
 
 	String username
 	String password
+    String trigramm
+
 	boolean enabled = true
 	boolean accountExpired = false
 	boolean accountLocked = false
@@ -43,6 +45,7 @@ class Personne implements Serializable {
 	static constraints = {
 		password blank: false, password: true
 		username blank: false, unique: true
+        trigramm blank: false, unique: true
 	}
 
 	static mapping = {

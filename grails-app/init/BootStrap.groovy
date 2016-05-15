@@ -9,6 +9,7 @@ class BootStrap {
         def admin = new Personne();
         admin.username = 'admin'
         admin.password = 'admin'
+        admin.trigramm = 'ADM'
         admin.save(flush: true)
 
         def role = Role.findByAuthority('ROLE_ADMIN')

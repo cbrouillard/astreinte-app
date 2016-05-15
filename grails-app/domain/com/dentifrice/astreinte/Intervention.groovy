@@ -5,27 +5,27 @@ import groovy.transform.ToString
 
 @EqualsAndHashCode
 @ToString(includeNames=true, includePackage=false)
-class Astreinte {
+class Intervention {
 
-    static belongsTo = [Personne]
+    static belongsTo = [Astreinte]
 
     String id
 
     Date dateCreated
     Date lastUpdated
 
-    Personne owner
+    Astreinte astreinte
+    Personne creator
 
     Date startDate
     Date endDate
-
-    Integer level
-    Float price
+    String description
 
     static constraints = {
     }
 
     static mapping = {
         id generator:'uuid'
+        description type: 'text'
     }
 }
