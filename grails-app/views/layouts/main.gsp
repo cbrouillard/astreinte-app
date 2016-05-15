@@ -12,40 +12,45 @@
 
     <g:layoutHead/>
 </head>
+
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-                    <i class="fa grails-icon">
-                        <asset:image src="grails-cupsonly-logo-white.svg"/>
-                    </i> Grails
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Dentifrice</a>
         </div>
-    </div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
     <g:layoutBody/>
+</div>
 
-    <div class="footer" role="contentinfo"></div>
+<footer>
+    <nav class="navbar navbar-default navbar-fixed-bottom" >
+        <div class="container-fluid">
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
+            <ul class="nav navbar-nav">
+                <li class="navbar-text">Dentifrice - Gestion d'astreintes au boulot</li>
+            </ul>
+        </div>
+    </nav>
+</footer>
 
-    <asset:javascript src="application.js"/>
+
+<asset:javascript src="application.js"/>
 
 </body>
 </html>
