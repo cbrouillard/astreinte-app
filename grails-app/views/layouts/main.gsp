@@ -33,7 +33,6 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <sec:ifLoggedIn>
-
                     <li><g:link controller="logoff" class="logout"><span
                             class="glyphicon glyphicon-log-out"></span> Déconnexion</g:link>
                     </li>

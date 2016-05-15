@@ -10,9 +10,11 @@ class AstreinteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    AstreinteService astreinteService
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Astreinte.list(params), model:[astreinteCount: Astreinte.count()]
+        respond astreinteService.findAstreintesWithin4Months()
     }
 
     def show(Astreinte astreinte) {
